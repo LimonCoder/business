@@ -40,7 +40,7 @@ class Admin extends CI_Controller {
 		$login_user = array();
 		$fee = (int) $_POST['tin_no'];
 		$vat_fee = (int) $this->Location_db->get_tax($_POST['district_name']);
-		$total_fee = number_format(($fee * ($vat_fee / 100)) + $fee,2);
+		$total_fee = ($fee * ($vat_fee / 100)) + $fee;
 		$track_id = $this->Website->gen_trackid();
 		$check_track_id = $this->Website->checking_trackid($track_id);
 
@@ -98,7 +98,7 @@ class Admin extends CI_Controller {
 			"trackid" => $check_track_id,
 			"sonod_no" => $this->input->post('owner_no'),
 			"b_type" => $this->input->post('type_of_organization'),
-			"fee" => number_format($fee,2),
+			"fee" => $fee,
 			"vat" =>number_format(($fee * ($vat_fee / 100)),2),
 			"total_fee"=> $total_fee,
 
@@ -130,13 +130,12 @@ class Admin extends CI_Controller {
 
 	}
 
+	// trade_licence_applicent_list //
 	public function trade_appliction_list(){
 		$this->load->view('pages/header');
 		$this->load->view('trade_lience/tradelicence_application_list');
 		$this->load->view('pages/footer');
 	}
-
-
 	public function trade_application_list_action(){
 		$serial_no = 1;
 		$fetch_data = $this->Trade_model->make_datable();
@@ -172,12 +171,16 @@ class Admin extends CI_Controller {
 
 	}
 
+
+	// single person trade_licence_applicent_delete //
 	public function trade_applicent_delete(){
 		$trackid = $_POST['id'];
 		$result = $this->Trade_model->single_trade_delete($trackid);
 		echo json_encode($result);
 	}
 
+
+	// trade_licence_certificate_view
 	public function certificate(){
 		$id = $this->uri->segment(3);
 		$data['personalinfo'] = $this->Trade_model->trade_personal_info($id);
@@ -188,7 +191,7 @@ class Admin extends CI_Controller {
 
 	}
 
-
+	// location add for tax //
 	public function bd_location(){
 		$data['district'] = $this->Location_db->get_district();
 		$this->load->view('pages/header');
@@ -196,6 +199,7 @@ class Admin extends CI_Controller {
 		$this->load->view('pages/footer');
 	}
 
+	// location form validation //
 	public function location_form_action(){
 
 
@@ -211,7 +215,7 @@ class Admin extends CI_Controller {
 		echo json_encode(array("key"=> $res));
 	}
 
-
+	// location_list //
 	public function location_list(){
 		header("Content-Type: application/json");
 		$serial_no = 1;
@@ -241,7 +245,7 @@ class Admin extends CI_Controller {
 
 	}
 
-
+	// get district for tax //
 	public function get_district(){
 		$res = $this->Location_db->get_district();
 		$html = '<option value="">Select</option>';
@@ -253,13 +257,14 @@ class Admin extends CI_Controller {
 
 	}
 
+	// get sub_district by district //
 	public function get_sub_district(){
 		extract($_POST);
 		$res = $this->Location_db->get_upozila($id);
 		echo $res;
 	}
 
-
+	// user logout //
 	public function logout(){
 		$this->Website->logout_history();
 		$this->session->sess_destroy();
