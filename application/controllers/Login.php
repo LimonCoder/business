@@ -16,6 +16,7 @@ class Login extends CI_Controller {
 		
 	}
 
+	// user login //
 	public function can_login(){
 		$username=$this->input->post('user_name',TRUE);
 		$password=$this->input->post('password',TRUE);
