@@ -399,14 +399,11 @@
                                 swal({
                                     title: "সনদ",
                                     text: "আপনি কি আপনার সনদটি বের করতে চান ?",
-                                    icon: "success",
                                     buttons: true,
                                 })
                                     .then((willDelete) => {
                                         if (willDelete) {
-
-                                        } else {
-
+											window.open("Admin/certificate/"+res.trackid,"_self");
                                         }
                                     });
                             },1200)

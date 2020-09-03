@@ -125,7 +125,7 @@ class Admin extends CI_Controller {
 		// Finally complete the transaction
 		$this->db->trans_commit();
 
-		echo json_encode(array("status"=> "success", "message"=> "Successfully data sync with master"));
+		echo json_encode(array("status"=> "success", "message"=> "Successfully data sync with master","trackid"=>$check_track_id));
 
 
 	}
