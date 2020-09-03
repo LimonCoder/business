@@ -105,4 +105,9 @@ class Trade_model extends CI_Model
 
 	}
 
+
+	public function total_trade_lience(){
+		return $this->db->count_all('personalinfo');
+	}
+
 }

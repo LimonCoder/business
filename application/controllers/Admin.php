@@ -19,8 +19,9 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
+		$data['total_lience'] = $this->Trade_model->total_trade_lience();
 		$this->load->view('pages/header');
-		$this->load->view('deshboard');
+		$this->load->view('deshboard',$data);
 		$this->load->view('pages/footer');
 	}
 
