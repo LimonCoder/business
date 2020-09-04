@@ -23,7 +23,7 @@
 					<label for="owner_name_bn" class="col-sm-3 control-label">মালিকের নাম (বাংলায়)
 						<span style="color: red">*</span></label>
 					<div class="col-sm-3">
-						<input type="text" name="owner_name_bn" id="owner_name_bn" value="" required data-parsley-pattern="^[a-zA-Z ]+$" data-parsley-trigger="keyup" data-parsley-error-message="মালিকের নাম দিন বাংলায়...."  class="form-control"/>
+						<input type="text" name="owner_name_bn" id="owner_name_bn" value="" required  data-parsley-trigger="keyup" data-parsley-error-message="মালিকের নাম দিন বাংলায়...."  class="form-control"/>
 						<span class="error_owner_name_bn" style="color: red"></span>
 					</div>
 				</div>
@@ -117,7 +117,7 @@
 			<div class="row form-group">
 				<label for="business_name" class="col-sm-3 control-label">ব্যবসার নাম :<span style="color: red">*</span></label>
 				<div class="col-sm-3">
-					<input type="text" name="business_name" id="business_name" value="" class="form-control " required data-parsley-pattern="^[a-zA-Z ]+$" data-parsley-trigger="keyup" data-parsley-error-message="ব্যবসার নাম দিন বাংলায়..."/>
+					<input type="text" name="business_name" id="business_name" value="" class="form-control " required data-parsley-trigger="keyup" data-parsley-error-message="ব্যবসার নাম দিন বাংলায়..."/>
 
 
 				</div>

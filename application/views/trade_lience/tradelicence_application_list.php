@@ -76,7 +76,7 @@
         $("#fromdate").datepicker({ dateFormat: 'yy-mm-dd' });
     });
 
-
+	// globar varibale decleare in main scirpt //
     var current_date = new Date();
     var datesort = "";
 
@@ -103,7 +103,7 @@
 
     } );
 
-    // date to date searching
+    // date to date data_searching by datatable
     function search_report(from_date, to_date){
         datesort = "select";
         $("#applicent_list").dataTable().fnSettings().ajax.data.from_date = from_date;
