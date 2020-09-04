@@ -19,6 +19,7 @@ class Trade_model extends CI_Model
 			$trackid = $this->session->userdata('app_trackid');
 			$this->db->where('p.track_id',$trackid);
 		}
+		$this->db->where('m.genarate_data BETWEEN "'.$_POST['from_date'].'" and "'.$_POST['to_date'].'"');
 
 		if (isset($_POST['search']['value'])){
 			$this->db->group_start();
@@ -31,7 +32,11 @@ class Trade_model extends CI_Model
 
 		if (isset($_POST['order'])){
 			$this->db->order_by($this->select_coloum[$_POST['order'][0]['column']], $_POST['order'][0]['dir']);
-		}else{
+		}elseif ($_POST['datesorting'] == "select"){
+			$this->db->order_by("m.genarate_data","ASC");
+
+		}
+		else{
 			$this->db->order_by("p.id","DESC");
 		}
 

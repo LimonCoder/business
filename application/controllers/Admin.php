@@ -102,6 +102,7 @@ class Admin extends CI_Controller {
 			"fee" => $fee,
 			"vat" =>number_format(($fee * ($vat_fee / 100)),2),
 			"total_fee"=> $total_fee,
+			"genarate_data" => date('Y-m-d')
 
 		);
 
@@ -154,9 +155,9 @@ class Admin extends CI_Controller {
 			$sub_array[] = $row->sonod_no;
 			$sub_array[] = $row->business_name;
 			$sub_array[] = date("d-m-Y", strtotime($row->genarate_data));
-			$sub_array[] = '<a href="Admin/certificate/'.$row->track_id.'" class="btn btn-primary btn-xs bangla_certificate"  data-trackid="\'+value.trackid+\'" style="font-size: 12px;margin-left: 5px">বাংলা</a> <button class="btn btn-warning btn-xs" style="font-size: 12px;margin-left: 5px">ইংরেজী</button>';
+			$sub_array[] = '<a href="Admin/certificate/'.$row->track_id.'" class="btn btn-primary btn-lg  bangla_certificate"  data-trackid="\'+value.trackid+\'" style="font-size: 15px;margin-left: 20px">বাংলা</a> <button class="btn btn-lg  btn-warning " style="font-size: 15px;margin-left: 5px">ইংরেজী</button>';
 			if($this->session->userdata('is_status') != 3){
-				$sub_array[] = '<button class="btn btn-danger btn-xs trade_delete" data-trackid ="'.$row->track_id.'" style="font-size: 12px;margin-left: 5px">Delete</button>';
+				$sub_array[] = '<button class="btn btn-danger btn-lg trade_delete" data-trackid ="'.$row->track_id.'" style="font-size: 15px;margin-left: 5px">Delete</button>';
 			}
 			$personal_info[] = $sub_array;
 		}

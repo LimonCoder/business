@@ -18,10 +18,12 @@
   <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
   <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 
 	<!-- Bootstrap core JavaScript-->
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
 	<script src="https://parsleyjs.org/dist/parsley.js"></script>
@@ -42,6 +44,15 @@
 	<!-- Page level custom scripts -->
 	<script src="assets/js/demo/chart-area-demo.js"></script>
 	<script src="assets/js/demo/chart-pie-demo.js"></script>
+
+	<script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+	<script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js" ></script>
+	<script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js" ></script>
+
+
+
 
 
 
@@ -101,7 +112,22 @@
 		.parsley-type, .parsley-required, .parsley-equalto{
 			color:#ff0000;
 		}
-
+		#applicent_list_length {
+			width: 23%;
+			margin-bottom: -48px;
+		}
+		.dt-buttons {
+			text-align: center;
+			width: 29%;
+			position: relative;
+			left: 36%;
+		}
+		div.dataTables_wrapper div.dataTables_filter {
+			text-align: right;
+			width: 22%;
+			float: right;
+			margin-top: -20px;
+		}
 	</style>
 
 
@@ -116,7 +142,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Admin">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
