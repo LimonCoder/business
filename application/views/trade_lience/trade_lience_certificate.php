@@ -87,7 +87,7 @@
 		</style>
 	</head>
 <body style="font-family: SutonnyOMJ ">
-		<div id="main">
+		<div id="main" style="margin-right:10px;">
 			<div id="">
 				
 				
@@ -96,19 +96,19 @@
 				<table style="border-collapse:collapse;margin:15px auto 10px;" width="96%" height="126px" cellspacing="0" cellpadding="0" border="0px">
 						
 						<tbody><tr>
-							<td style="width: 18%; text-align:right;"><img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/112017/untitled-1_42.png?6_tz3joOQzrqzf.ED6sIvjE07xxmdSRF&itok=x93gxbsF" width="120px" height="120px"> </td>
-							<td style="text-align:center;position:relative;top:-20px;right:-24px;"><font style="font-family: SutonnyOMJ; font-size:40px; font-weight:bold; color:#000000;margin-left: -38px;">ক্রিয়েটিভ কমন্স অ্যাট্রিবিউশন</font>  <br>
+							<td style="width: 18%; text-align:left;"><img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/112017/untitled-1_42.png?6_tz3joOQzrqzf.ED6sIvjE07xxmdSRF&itok=x93gxbsF" width="70px" height="70px"> </td>
+							<td style="text-align:center;position:relative;top:-20px;right:-24px;"><font style="font-family: SutonnyOMJ; font-size:30px; font-weight:bold; color:#000000;margin-left: -38px;">ক্রিয়েটিভ কমন্স অ্যাট্রিবিউশন</font>  <br>
 
 																</td>
 							<td style="width: 15%; text-align:center;">
-							<img src="img/logo_elish.jpg" style="position:relative;" width="100px" height="100px">
+							<img src="img/logo_elish.jpg" style="position:relative;" width="70px" height="70px">
 						  </td>
 						</tr>
 					</tbody></table>
 					
 					<table style="border-collapse:collapse;margin:0px auto; margin-top: 10px;" width="99%" height="50px" cellspacing="0" cellpadding="0" border="0">
 						<tbody><tr>
-							<td style=""><div class="cert-heading"> ব্যবসার অনুমতি পত্র</div></td>
+							<td align="center"><div class="cert-heading"> ব্যবসার অনুমতি পত্র</div></td>
 							
 						</tr>
 					</tbody></table>
@@ -141,11 +141,11 @@
 					<table style="float:right; border-collapse:collapse;table-layout:fixed; margin: 2px auto;" width="20%" height="60px" cellspacing="0" cellpadding="0" border="0"> 
 						<tbody><tr height="28px">
 
-							<td style="">
+							<td align="right">
 								<?php if(isset($personalinfo->image)):?>
-								<img src="<?=base_url()?>/assets/img/<?=$personalinfo->image?>" style="position:relative;top:-25px;right:-23px;padding: 5px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;" width="100px" height="100px">
+								<img src="<?=base_url()?>/assets/img/<?=$personalinfo->image?>" style="position:relative;top:-25px;right:-23px;padding: 5px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;" width="80px" height="80px">
 								<?php else: ?>
-								<img src="<?=base_url()?>/assets/img/profile.png" style="position:relative;top:-25px;right:-23px;padding: 5px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;" width="100px" height="100px">
+								<img src="<?=base_url()?>/assets/img/profile.png" style="position:relative;top:-25px;right:-23px;padding: 5px;box-sizing: border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;" width="80px" height="80px">
 								<?php endif; ?>
 							</td>
 

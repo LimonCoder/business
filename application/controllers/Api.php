@@ -14,6 +14,8 @@ class Api extends CI_Controller{
 		header("Content-Type: application/json");
 		$res =  $this->Api_model->fetch_data();
 		echo json_encode($res);
+        
+        
 
 	}
 
@@ -21,7 +23,9 @@ class Api extends CI_Controller{
 		header("Content-Type: application/json");
 		if ($this->input->post('insert_action')) {
 			$patner_info = array();
-			$login_user = array();
+			$login_user = array()
+           
+            
 			$fee = (int)$_POST['tin_no'];
 			$vat_fee = (int)$this->Location_db->get_tax($_POST['district_name']);
 			$total_fee = ($fee * ($vat_fee / 100)) + $fee;
@@ -116,7 +120,11 @@ class Api extends CI_Controller{
 			echo json_encode(array("status" => "no response", "message" => "HTTP request not valid"));
 		}
 	}
-
+    
+    
+    
+    
+     
 
 
 }
